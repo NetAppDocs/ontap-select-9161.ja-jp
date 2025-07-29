@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: concept_api_versions.html 
+keywords: rest api, deploy rest api, rest, version, versioning 
+summary: ONTAP Select Deployに含まれるREST APIにはバージョン番号が割り当てられています。APIのバージョン番号は、Deployのリリース番号とは無関係です。Deployのリリースに含まれるAPIのバージョンと、それがAPIの使用にどのような影響を与えるかを把握しておく必要があります。 
+---
+= ONTAP Select Deploy APIのバージョン管理
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+ONTAP Select Deployに含まれるREST APIにはバージョン番号が割り当てられています。APIのバージョン番号は、Deployのリリース番号とは無関係です。Deployのリリースに含まれるAPIのバージョンと、それがAPIの使用にどのような影響を与えるかを把握しておく必要があります。
+
+Deploy管理ユーティリティの現在のリリースには、REST APIバージョン3が含まれています。Deployユーティリティの過去のリリースには、以下のAPIバージョンが含まれています。
+
+2.8以降をデプロイする:: ONTAP Select Deploy 2.8 以降のすべてのリリースには、REST API バージョン 3 が含まれています。
+2.7.2 以前のバージョンをデプロイする:: ONTAP Select Deploy 2.7.2 およびそれ以前のすべてのリリースには、REST API バージョン 2 が含まれています。
+
+
+
+NOTE: REST API バージョン 2 と 3 には互換性がありません。APIバージョン 2 を含む以前のリリースから Deploy 2.8 以降にアップグレードする場合は、API に直接アクセスする既存のコードと、コマンドラインインターフェースを使用するスクリプトをすべて更新する必要があります。

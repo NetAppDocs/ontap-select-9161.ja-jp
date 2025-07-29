@@ -1,0 +1,84 @@
+---
+sidebar: sidebar 
+permalink: task_chk_nvme_configure.html 
+keywords: ontap select, nvme storage, host preparation 
+summary: NVMe ドライブをソフトウェア RAID で使用する予定の場合は、ドライブを認識するようにホストを構成する必要があります。 
+---
+= NVMeドライブを使用するようにONTAP Selectホストを構成する
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NVMe ドライブをソフトウェア RAID で使用する予定の場合は、ドライブを認識するようにホストを構成する必要があります。
+
+NVMeデバイスでVMDirectPath I/Oパススルーを使用することで、データ効率を最大化できます。この設定により、ドライブがONTAP Select仮想マシンに公開され、 ONTAPがデバイスに直接PCIアクセスできるようになります。
+
+.開始する前に
+展開環境が次の最小要件を満たしていることを確認してください。
+
+* サポートされているDeploy管理ユーティリティを備えたONTAP Select 9.7以降
+* プレミアムXLプラットフォームライセンスまたは90日間の評価ライセンス
+* VMware ESXi バージョン 6.7 以降
+* 仕様1.0以降に準拠したNVMeデバイス
+
+
+フォローlink:kvm-host-configuration-and-preparation-checklist.html["ホスト準備チェックリスト"] 、確認するlink:reference_chk_deploy_req_info.html["デプロイユーティリティのインストールに必要な情報"] 、そしてlink:reference_chk_select_req_info.html["ONTAP Selectのインストールに必要な情報"]詳細についてはトピックをご覧ください。
+
+.タスク概要
+この手順は、新しいONTAP Selectクラスタを作成する前に実行するように設計されています。既存のSW-RAID NVMeクラスタに追加のNVMeドライブを設定する場合にも、この手順を実行できます。この場合、ドライブを設定した後、SSDドライブを追加する場合と同様に、Deployを使用してドライブを追加する必要があります。主な違いは、DeployがNVMeドライブを検出し、ノードを再起動することです。既存のクラスタにNVMeドライブを追加する場合は、再起動プロセスについて次の点に注意してください。
+
+* デプロイは再起動オーケストレーションを処理します。
+* HA テイクオーバーとギブバックは順番に実行されますが、アグリゲートの再同期には時間がかかる場合があります。
+* 単一ノード クラスターではダウンタイムが発生します。
+
+
+見るlink:concept_stor_capacity_inc.html["ストレージ容量を増やす"]追加情報については、こちらをご覧ください。
+
+.手順
+. I/O 仮想化のサポートを有効にするには、ホストの *BIOS 構成* メニューにアクセスします。
+. *Intel(R) VT for Directed I/O (VT-d)* 設定を有効にします。
++
+image:nvme_01.png["ソケット構成"]
+
+. 一部のサーバーでは、*Intel Volume Management Device (Intel VMD)* がサポートされています。有効にすると、使用可能な NVMe デバイスが ESXi ハイパーバイザーに対して非表示になります。続行する前にこのオプションを無効にしてください。
++
+image:nvme_07.png["ソケット構成、VMD"]
+
+. NVMe ドライブを仮想マシンへのパススルー用に構成します。
++
+.. vSphere で、ホストの *構成* ビューを開き、*ハードウェア: PCI デバイス* の下にある *編集* をクリックします。
+.. ONTAP Selectに使用する NVMe ドライブを選択します。
++
+image:nvme_02.png["PCIデバイスの可用性を編集する"]
+
++
+
+NOTE: ONTAP Select VMシステムディスクと仮想NVRAMをホストするには、NVMeデバイスでバックアップされたVMFSデータストアが必要です。他のNVMeドライブをPCIパススルー用に設定する際には、この目的のために少なくとも1つのNVMeドライブを確保しておいてください。
+
+.. [OK]をクリックします。選択したデバイスは「利用可能（保留中）」と表示されます。
+
+
+. *ホストの再起動*をクリックします。
++
+image:nvme_03.png["このホストを再起動"]
+
+
+
+.終了後の操作
+ホストの準備が完了したら、 ONTAP Select Deployユーティリティをインストールできます。Deployは、新しく準備したホスト上にONTAP Selectストレージクラスタを作成する手順をガイドします。このプロセス中に、Deploy はパススルー用に構成された NVMe ドライブの存在を検出し、それらをONTAPデータ ディスクとして使用するために自動的に選択します。必要に応じて、デフォルトの選択を調整できます。
+
+
+NOTE: 各ONTAP Selectノードでは最大 14 個の NVMe デバイスがサポートされます。
+
+image:nvme_04.png["ONTAP Selectデプロイクラスタ"]
+
+クラスタの導入が完了すると、 ONTAP System Managerを使用してベストプラクティスに従ってストレージをプロビジョニングできます。ONTAPは、フラッシュ向けに最適化されたストレージ効率化機能を自動的に有効化し、NVMeストレージを最大限に活用します。
+
+image:nvme_05.png["ローカルストレージの準備"]
+
+image:nvme_06.png["ONTAP System Manager"]

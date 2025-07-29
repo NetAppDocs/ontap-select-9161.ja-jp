@@ -1,0 +1,36 @@
+---
+sidebar: sidebar 
+permalink: task_cli_clusters.html 
+keywords: administer, administering, cli, clusters 
+summary: ONTAP Selectクラスタを管理するために実行できる関連タスクがいくつかあります。 
+---
+= ONTAP Selectクラスタ
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+ONTAP Selectクラスタを管理するために実行できる関連タスクがいくつかあります。
+
+
+
+== ONTAP Selectクラスタを削除する
+
+ONTAP Selectクラスタが不要になった場合は、コマンドライン インターフェイスを使用して削除できます。
+
+.タスク概要
+クラスターはオフライン状態である必要があります。
+
+.手順
+. 管理者アカウントを使用して仮想マシンのデプロイ CLI にSign in。
+. クラスターのステータスを表示します。 
+`cluster show -name CLUSTERNAME`
+. クラスターがオフラインでない場合は、オフライン状態に移行します。 
+`cluster offline -name CLUSTERNAME`
+. クラスターがオフライン状態であることを確認した後、クラスターを削除します。 
+`cluster delete -name CLUSTERNAME`
+

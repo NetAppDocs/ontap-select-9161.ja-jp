@@ -1,0 +1,132 @@
+---
+sidebar: sidebar 
+permalink: reference_plan_ots_hardware.html 
+keywords: plan, planning, vmware, hardware, hardware requirements 
+summary: VMware 環境に関連して、考慮する必要があるハードウェア要件と計画上の問題がいくつかあります。 
+---
+= ONTAP Select VMwareハイパーバイザーとハードウェアの考慮事項
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+VMware 環境に関連して、考慮する必要があるハードウェア要件と計画上の問題がいくつかあります。
+
+
+
+== ハイパーバイザーの要件
+
+ONTAP Select が実行されるハイパーバイザーに関連する要件がいくつかあります。
+
+
+NOTE: 追加の既知の制限事項や制約事項については、 ONTAP Selectのバージョンの現在のリリース ノートを確認してください。
+
+
+
+=== VMwareライセンス
+
+ONTAP Selectクラスタを導入するには、 ONTAP Selectが実行されるハイパーバイザーホスト用の有効なVMware vSphereライセンスが必要です。導入環境に適したライセンスを使用してください。
+
+
+
+=== ソフトウェアの互換性
+
+ONTAP Select は、次のハイパーバイザーに導入できます。
+
+* Red Hat Enterprise Linux 8.6、8.7、8.8、9.0、9.1、9.2、9.4、および 9.5 上の KVM
+* Rocky Linux 8.6、8.7、8.8、8.9、9.0、9.1、9.2、9.3、9.4、および 9.5 上の KVM
+* VMware ESXi 7.0 GA (ビルド 15843807 以上) (7.0 U1、U2、U3C を含む)
+* VMware ESXi 8.0 GA (ビルド 20513097)
+* VMware ESXi 8.0 U1 (ビルド 21495797)
+* VMware ESXi 8.0 U2
+* VMware ESXi 8.0 U3
+
+
+
+NOTE: NetApp は、VMware も同じバージョンを引き続きサポートしている限り、特定されたバージョンの ESXi でONTAP Select をサポートします。
+
+
+NOTE: ESXi 6.5 GAおよびESXi 6.7 GAは提供終了となりました。これらのバージョンのONTAP Selectクラスタをご利用の場合は、以下のサポート対象バージョンにアップグレードしてください。  https://mysupport.netapp.com/matrix["Interoperability Matrix Tool（IMT）"^] 。
+
+
+
+=== VMware vCenter およびスタンドアロン ESXi ホスト
+
+ESXiハイパーバイザーホストがvCenter Serverによって管理されている場合は、vCenterの認証情報を使用して、ホストをDeploy管理ユーティリティに登録する必要があります。ESXiの認証情報を使用して、ホストをスタンドアロンホストとして登録することはできません。
+
+
+
+== コアハードウェア要件
+
+ONTAP Selectを導入する物理ハイパーバイザーホストは、いくつかのハードウェア要件を満たしている必要があります。ハイパーバイザーホストには、最小ハードウェア要件を満たしていれば、任意のプラットフォームを選択できます。サポートされているハードウェアプラットフォームは、 Cisco、Dell、HP、Fujitsu、Lenovo、Supermicroの各ベンダーから提供されています。
+
+
+NOTE: ONTAP Select 9.9.1 以降では、Intel Xeon Sandy Bridge 以降に基づく CPU モデルのみがサポートされます。
+
+参照 https://mysupport.netapp.com/matrix["相互運用性マトリックスツール、window=_blank"]詳細についてはこちらをご覧ください。
+
+
+
+=== 基本的なハードウェア要件
+
+ノードインスタンスタイプやライセンス提供に関係なく、すべてのプラットフォームに適用される共通のハードウェア要件がいくつかあります。
+
+.プロセッサ
+サポートされているマイクロプロセッサは次のとおりです。
+
+* サーバー向けインテル Xeon プロセッサー（ link:https://www.intel.com/content/www/us/en/products/processors/xeon/view-all.html?Processor+Type=1003["Intel Xeon プロセッサー、window=_blank"]詳細は
+
+
+
+NOTE: Advanced Micro Devices（AMD）プロセッサはONTAP Selectではサポートされていません。
+
+.イーサネット構成
+クラスターのサイズに基づいて、いくつかのイーサネット構成がサポートされます。
+
+[cols="30,35,35"]
+|===
+
+
+| クラスターサイズ | 最小要件 | 推奨要件 
+
+
+| 単一ノードクラスター | 2 x 1GbE | 2 x 10GbE 
+
+
+| 2ノードクラスタまたはMetroCluster SDS | 4 x 1GbE または 1 x 10GbE | 2 x 10GbE 
+
+
+| 4/6/8ノードクラスター | 2 x 10GbE | 4 x 10GbE または 2 x 25/40GbE 
+|===
+
+
+=== インスタンスタイプに基づく追加のハードウェア要件
+
+ノードインスタンスタイプに基づいて、いくつかの追加のハードウェア要件があります。
+
+参照link:concept_lic_platforms.html["プラットフォームライセンスの提供内容を理解する"]詳細についてはこちらをご覧ください。
+
+.小規模
+* CPU コア 6 個以上の物理コアがあり、そのうち 4 個はONTAP Select用に予約されています。
+* メモリ 24 GB 以上、うち 16 GB はONTAP Select用に予約されています。
+* 必要なプラットフォーム ライセンスは、Standard、Premium、または Premium XL です。
+
+
+.中
+* CPU コア 10 個以上の物理コアがあり、そのうち 8 個はONTAP Select用に予約されています。
+* メモリ72GB以上（ ONTAP Select用に64GBを予約）
+* 必要なプラットフォーム ライセンスは、Premium または Premium XL です。
+
+
+.大規模
+* CPU コア 18 個以上の物理コアがあり、そのうち 16 個はONTAP Select用に予約されています。
+* メモリ 136 GB 以上（ ONTAP Select用に 128 GB を予約）
+* プレミアムXLを提供するために必要なプラットフォームライセンス
+
+
+
+NOTE: プラットフォーム ライセンスに基づいて追加のディスク要件があります。見るlink:reference_plan_ots_storage.html["ストレージとRAID"]詳細についてはこちらをご覧ください。
