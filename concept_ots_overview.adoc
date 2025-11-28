@@ -127,6 +127,7 @@ ONTAP Selectで使用される仮想化環境のため、NIC オフロード機�
 * サービスプロセッサ
 * SVMの移行
 * SnapLock Compliance
+* SnapMirrorアクティブ同期
 * VMware HCX
 
 
