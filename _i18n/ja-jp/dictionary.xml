@@ -1289,8 +1289,6 @@
   <block id="26d0c2c18567614b2696413728c683e7" category="paragraph">あるいは、単一のLUNに単一のデータストアを作成することから始めることもできます。より大きなONTAP Select容量ライセンスを必要とする追加のスペースが必要な場合は、そのスペースを同じデータストアにエクステントとして追加できます（データストアの最大サイズまで）。最大サイズに達した後は、新しいデータストアを作成してONTAP Selectに追加できます。どちらのタイプの容量拡張操作もサポートされており、 ONTAP Deployのストレージ追加機能を使用して実行できます。各ONTAP Selectノードは、最大400TBのストレージをサポートするように設定できます。複数のデータストアから容量をプロビジョニングするには、2段階のプロセスが必要です。</block>
   <block id="483c848cf08aacd19acb4d0b41190eb1" category="inline-link-macro">ストレージ容量を増やす</block>
   <block id="b58c5f0cafd2de6e2a43174f49b5fb62" category="paragraph">初期クラスタ作成では、初期データストアのスペースの一部または全部を使用するONTAP Selectクラスタを作成できます。次のステップでは、追加のデータストアを使用して、必要な総容量に達するまで、1つ以上の容量追加操作を実行します。この機能については、セクションをご覧ください。 <block ref="707976c9d65fe867eaf11be0a6ab721e" category="inline-link-macro-rx"></block> 。</block>
-  <block id="1c3a0084b78822e0ed3892bb67d6be38" category="inline-link-macro">VMware KB 1001618</block>
-  <block id="df2dd4b50329cef60defe7b0e8c9496d" category="admonition">VMFSオーバーヘッドはゼロではありません（ <block ref="9e97a6a937e133b25ea4405a923fbee9" category="inline-link-macro-rx"></block> ）、データストアによって空きとして報告された領域全体を使用しようとすると、クラスター作成操作中に誤ったエラーが発生します。</block>
   <block id="41ebad797f5863853e01363510672b54" category="paragraph">各データストアには2%のバッファが未使用のまま残されます。このスペースはONTAP Selectでは使用されないため、容量ライセンスは必要ありません。ONTAPONTAPは、容量上限が指定されていない限り、バッファの正確なギガバイト数を自動的に計算します。容量上限が指定されている場合は、まずそのサイズが適用されます。容量上限のサイズがバッファサイズの範囲内にある場合、クラスタの作成は失敗し、容量上限として使用できる正しい最大サイズパラメータを示すエラーメッセージが表示されます。</block>
   <block id="f567af5ce47f1c4acb58b73b09111070" category="paragraph">VMFS 6 は、新規インストールと、既存のONTAP Deploy またはONTAP Select VM の Storage vMotion 操作のターゲットの両方でサポートされています。</block>
   <block id="5371e21a364d5455e7007a8b43a2e885" category="paragraph">VMwareは、VMFS 5からVMFS 6へのインプレースアップグレードをサポートしていません。そのため、VMをVMFS 5データストアからVMFS 6データストアに移行できる唯一のメカニズムはStorage vMotionです。ただし、 ONTAP SelectおよびONTAP DeployによるStorage vMotionのサポートは拡張され、VMFS 5からVMFS 6への移行という特定の目的以外にも、様々なシナリオに対応できるようになりました。</block>
@@ -3829,4 +3827,5 @@
   <block id="1d6a755bc579447fd7ccaf4c366f016d" category="list-text">ONTAP Select Deploy MediatorとONTAP Selectノード間の125msのRTTと5Mbpsの最小帯域幅</block>
   <block id="2cc135ee22f21247b52a24a050dc5f69" category="list-text">PremiumまたはPremium XLライセンス</block>
   <block id="3712f888ec8c939491ff4fe2129b3d6e" category="paragraph">MetroCluster SDSは、2ノードONTAP Selectクラスタを作成する際の構成オプションです。これは、リモートオフィス／ブランチオフィス（ROBO）の導入に似ています。この強化された2ノード構成により、さらに多くのユースケースシナリオが利用可能になります。MetroCluster SDSを導入する準備の一環として、要件と制限事項を認識しておく必要があります。</block>
+  <block id="03cb40fe1372475f8e49ebd07e5d2d9c" category="admonition">VMFSのオーバーヘッドはゼロではなく（VMware KB 1001618）、データストアによって空き領域として報告された領域全体を使用しようとすると、クラスタ作成操作中に誤ったエラーが発生することが判明しました。</block>
 </blocks>
