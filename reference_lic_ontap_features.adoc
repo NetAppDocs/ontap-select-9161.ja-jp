@@ -29,6 +29,9 @@ NOTE: ハードウェア固有の依存関係を持つONTAP機能は、通常、
 * CIFS
 * 重複排除と圧縮
 * FlexCache
++
+ONTAP Select での FlexCache 書き戻しのサポートには制限があります。詳細については、link:https://docs.netapp.com/us-en/ontap-select/concept_ots_overview.html#flexcache-write-back-with-ontap-select["FlexCache による ONTAP Select への書き戻し"^]を参照してください。
+
 * FlexClone
 * iSCSI
 * NDMP
