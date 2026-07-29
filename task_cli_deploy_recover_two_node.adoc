@@ -18,6 +18,7 @@ ONTAP Select Deployユーティリティに障害が発生したり、何らか�
 
 
 
+[[before-you-begin]]
 == 開始する前に
 
 成功を確実にするために、デプロイ ユーティリティのインスタンスの回復を試みる前に準備する必要があります。
@@ -58,6 +59,7 @@ ONTAP Select Deployユーティリティのインスタンスをリカバリす�
 |===
 
 
+[[restore-a-deploy-utility-instance-using-a-configuration-backup]]
 == 構成バックアップを使用してデプロイユーティリティインスタンスを復元する
 
 2ノードクラスタを含む、障害が発生したDeployユーティリティインスタンスのバックアップがある場合は、構成データを新しいDeploy仮想マシンインスタンスにリストアできます。その後、 ONTAP Selectクラスタ内の2つのノードに対して追加の構成を実行して、リカバリを完了する必要があります。
@@ -119,6 +121,7 @@ disk assign -disk <mediator-disk2-name> -owner <node2-name>
 
 
 
+[[reconfigure-and-recover-a-deploy-utility-instance]]
 == デプロイユーティリティインスタンスを再構成して回復する
 
 2ノードクラスタを含む、障害が発生したDeployユーティリティインスタンスのバックアップがない場合は、新しいDeploy仮想マシンでメディエータiSCSIターゲットとメールボックスを設定する必要があります。その後、 ONTAP Selectクラスタ内の2つのノードに対して追加の設定を行い、リカバリを完了する必要があります。

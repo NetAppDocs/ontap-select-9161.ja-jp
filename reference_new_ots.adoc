@@ -19,6 +19,7 @@ summary: 現在のリリースには、 ONTAP Selectに固有のいくつかの�
 
 
 
+[[ontap-select-9-16-1]]
 == ONTAP Select9.16.1
 
 ONTAP Select 9.16.1 には、いくつかの新機能と改善点が含まれています。
@@ -36,6 +37,7 @@ KVMハイパーバイザーのサポートを更新:: ONTAP Select 9.16.1 以降
 
 
 
+[[ontap-select-9-15-1]]
 == ONTAP Select9.15.1
 
 ONTAP Select 9.15.1 には、いくつかの新機能と改善点が含まれています。
@@ -62,6 +64,7 @@ NOTE: クラスタの拡張と縮小のサポートは、ESX クラスタのみ�
 
 
 
+[[ontap-select-9-14-1]]
 == ONTAP Select9.14.1
 
 ONTAP Select 9.14.1 には、いくつかの新機能と改善点が含まれています。
@@ -74,6 +77,7 @@ ONTAP Select Deploy サポートの更新:: ONTAP Select Deploy 9.14.1 の 9.14.
 
 
 
+[[ontap-select-9-13-1]]
 == ONTAP Select9.13.1
 
 ONTAP Select 9.13.1 には、いくつかの新機能と改善点が含まれています。
@@ -85,6 +89,7 @@ ONTAP Select Deploy サポートの更新:: 2024年4月以降、 ONTAP Select De
 
 
 
+[[ontap-select-9-12-1]]
 == ONTAP Select9.12.1
 
 ONTAP Select 9.12.1は、 ONTAPコア製品の最新リリースにおけるほとんどの新機能の恩恵を受けています。ONTAPONTAP Select固有の新機能や改善点は含まれていません。
@@ -93,6 +98,7 @@ ONTAP Select 9.12.1は、 ONTAPコア製品の最新リリースにおけるほ�
 
 
 
+[[ontap-select-9-11-1]]
 == ONTAP Select9.11.1
 
 ONTAP Select 9.11.1 には、いくつかの新機能と改善点が含まれています。
@@ -123,6 +129,7 @@ NetAppは、 ONTAP Select for KVMからONTAP Select for ESXiを含む他のONTAP
 
 
 
+[[ontap-select-9-10-1]]
 == ONTAP Select9.10.1
 
 ONTAP Select 9.10.1 には、いくつかの新機能と改善点が含まれています。
@@ -150,6 +157,7 @@ KVMハイパーバイザーはサポートされなくなりました:: ONTAP Se
 
 
 
+[[ontap-select-9-9-1]]
 == ONTAP Select9.9.1
 
 ONTAP Select 9.9.1 には、いくつかの新機能と改善点が含まれています。
@@ -167,6 +175,7 @@ VMware ESXi サポートの更新:: ONTAP Select 9.9.1では、VMware ESXiのサ
 
 
 
+[[ontap-select-9-8]]
 == ONTAP Select9.8
 
 ONTAP Select 9.8 には、いくつかの新機能と変更された機能が含まれています。

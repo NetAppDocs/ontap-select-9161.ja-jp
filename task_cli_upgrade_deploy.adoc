@@ -18,6 +18,7 @@ summary: コマンドライン インターフェイスを使用して、既存�
 
 
 
+[[before-you-begin]]
 == 開始する前に
 
 アップグレード中に、Deploy を使用して他のタスクを実行しないようにしてください。Deploy ユーティリティのアップグレードに関する情報と制限については、最新のリリースノートを参照してください。
@@ -27,6 +28,7 @@ NOTE: ONTAP Select Deploy管理ユーティリティの古いインスタンス�
 
 
 
+[[download-the-upgrade-package]]
 == アップグレードパッケージをダウンロードする
 
 アップグレード プロセスを開始するには、NetAppサポート サイトから適切なDeploy仮想マシン アップグレード ファイルをダウンロードする必要があります。アップグレードパッケージは、単一の圧縮ファイルとしてフォーマットされます。
@@ -41,6 +43,7 @@ NOTE: ONTAP Select Deploy管理ユーティリティの古いインスタンス�
 
 
 
+[[upload-the-package-to-the-deploy-virtual-machine]]
 == パッケージを Deploy 仮想マシンにアップロードします
 
 アップグレードパッケージを取得したら、そのファイルを Deploy 仮想マシンにアップロードする必要があります。
@@ -67,6 +70,7 @@ scp ONTAPdeploy2.12_upgrade.tar.gz admin@10.228.162.221:/home/admin (provide pas
 
 
 
+[[apply-the-upgrade-package]]
 == アップグレードパッケージを適用する
 
 アップグレードファイルが Deploy 仮想マシンにアップロードされたら、アップグレードを適用できます。

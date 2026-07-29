@@ -18,6 +18,7 @@ ONTAP Select イメージを Deploy 管理ユーティリティのインスタ�
 
 
 
+[[before-you-begin]]
 == 開始する前に
 
 大まかに言うと、ONTAP Select イメージを Deploy のインスタンスに追加するプロセスは、次の 4 つのステップで構成されます：
@@ -35,6 +36,7 @@ NOTE: Deployユーティリティのインスタンスに含まれている元�
 
 
 
+[[download-the-install-image]]
 == インストールイメージをダウンロードする
 
 ONTAP SelectイメージをDeployユーティリティのインスタンスに追加するプロセスを開始するには、 NetAppサポートサイトからインストールイメージをダウンロードする必要があります。ONTAPONTAP Selectインストールイメージは、単一の圧縮ファイルとしてフォーマットされています。
@@ -52,6 +54,7 @@ ONTAP SelectイメージをDeployユーティリティのインスタンスに�
 
 
 
+[[upload-the-install-image-to-deploy]]
 == インストールイメージをDeployにアップロードする
 
 ONTAP Selectインストール イメージを取得したら、そのファイルを Deploy 仮想マシンにアップロードする必要があります。
@@ -87,6 +90,7 @@ exit
 
 
 
+[[add-the-install-image]]
 == インストールイメージを追加する
 
 新しいクラスタの導入時に使用できるように、ONTAP Select インストールイメージを Deploy images ディレクトリに追加できます。
@@ -109,6 +113,7 @@ exit
 
 
 
+[[display-the-available-install-images]]
 == 利用可能なインストールイメージを表示する
 
 新しいクラスターをデプロイするときに使用できる ONTAP Select イメージを表示できます。

@@ -18,6 +18,7 @@ ONTAP Selectの容量階層または容量プールのライセンスは、標�
 
 
 
+[[what-a-platform-license-offering-provides]]
 == プラットフォームライセンスが提供するもの
 
 特定のライセンス オファリングは、次の 2 つの領域でハイパーバイザー ホストの機能を定義および制限します。
@@ -30,12 +31,14 @@ ONTAP Selectの容量階層または容量プールのライセンスは、標�
 
 
 
+[[platform-license-offerings]]
 == プラットフォームライセンスの提供
 
 利用可能なプラットフォーム ライセンス オファリングは 3 つあります。
 
 
 
+[[standard]]
 === Standard
 
 標準サービスでは、次の機能が提供されます。
@@ -48,6 +51,7 @@ ONTAP Selectの容量階層または容量プールのライセンスは、標�
 
 
 
+[[premium]]
 === Premium
 
 プレミアム オファリングでは、次の機能が提供されます。
@@ -61,6 +65,7 @@ ONTAP Selectの容量階層または容量プールのライセンスは、標�
 
 
 
+[[premium-xl]]
 === プレミアムXL
 
 プレミアム XL オファリングでは、次の機能が提供されます。
@@ -77,6 +82,7 @@ NOTE: SW-RAID 構成での大規模インスタンス タイプまたは NVMe �
 
 
 
+[[compare-hardware-support-for-platform-license-offerings]]
 == プラットフォームライセンスオファリングのハードウェアサポートを比較する
 
 標準、プレミアム、プレミアムXLライセンスは、幅広いハードウェアとソフトウェアをサポートしています。ハードウェアとソフトウェアのバージョンに関する最新情報については、 link:https://mysupport.netapp.com/matrix/["Interoperability Matrix Tool"^] 。

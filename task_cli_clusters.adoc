@@ -18,6 +18,7 @@ ONTAP Selectクラスタを管理するために実行できる関連タスク�
 
 
 
+[[delete-an-ontap-select-clusters]]
 == ONTAP Selectクラスタを削除する
 
 ONTAP Selectクラスタが不要になった場合は、コマンドライン インターフェイスを使用して削除できます。

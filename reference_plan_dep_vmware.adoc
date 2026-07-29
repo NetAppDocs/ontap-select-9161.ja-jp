@@ -21,6 +21,7 @@ CAUTION: NetAppサポートからの指示がない限り、 ONTAP Select仮想�
 
 
 
+[[hypervisor-independent]]
 == ハイパーバイザーに依存しない
 
 ONTAP SelectとONTAP Select Deploy 管理ユーティリティはどちらもハイパーバイザーに依存しません。
@@ -64,6 +65,7 @@ ONTAP SelectノードをONTAPハードウェアベースクラスタに直接追
 
 
 
+[[vmware-hypervisor-environment]]
 == VMwareハイパーバイザー環境
 
 ONTAP Select Deploy ユーティリティを VMware 環境にインストールする前に考慮する必要がある、VMware 環境に固有の要件と制限がいくつかあります。
