@@ -1530,7 +1530,6 @@
   <block id="bbe48fb854ea022537208eeeff822f91" category="list-title">タスク概要</block>
   <block id="f9f5faecdbf3b023cf5652fa18b8c4ee" category="list-text">NetAppからシリアル番号やストレージ容量ライセンスを取得する必要はありません。</block>
   <block id="591ba54105fed20bc4bc8e31cee68eb3" category="list-text">購入したライセンスと同じ量のストレージをユーザー データに割り当てることができます。</block>
-  <block id="10db4e06bde0886ecc0f97ce3a350d45" category="list-text">ノードを評価ライセンスから購入ライセンスにアップグレードすることはできません。</block>
   <block id="de68e769353f85803d50af3ad5192201" category="list-text">OVF テンプレートのデプロイには vCenter アカウントのみを使用できます。ESXiホストへの直接インストールは現在サポートされていません。</block>
   <block id="3becac3f3a46d46f0df7e4df7b69a359" category="list-text">OVFテンプレート（ovaファイル内）は、vSphereスタンドアロンクライアントまたはvSphere Webクライアント（ESXi 6.5以降ではWebクライアントのみ）を使用してインストールする必要があります。ONTAPONTAP Select Deploy管理ユーティリティは使用しません。</block>
   <block id="324b9a453c1c067658adca4be37dbae0" category="section-title">ONTAP Selectクラスタホストを準備する</block>
@@ -2079,7 +2078,6 @@
   <block id="690f3dfc132299176ff75952d43e8d9d" category="list-text">改ざん防止スナップショットコピー</block>
   <block id="d8d124daaa3196fc86bdde707e37359d" category="admonition">StorageGRIDを使用する場合、 FabricPoolライセンスは必要ありません。</block>
   <block id="c3c1ba002ed4d0d1ae23559793a734bd" category="inline-link-macro">ONTAP SelectとONTAP 9の比較</block>
-  <block id="77aaedb7dde5f69b11a5683a958edbfc" category="list-text"><block ref="77aaedb7dde5f69b11a5683a958edbfc" category="inline-link-macro-rx"></block></block>
   <block id="ffa1963f0d0a25dfc04554dbe791a3b1" category="inline-link-macro">NetApp ONTAPマスターライセンスキー</block>
   <block id="16f9dd2af311dfdedd3814899d379c54" category="list-text"><block ref="16f9dd2af311dfdedd3814899d379c54" category="inline-link-macro-rx"></block></block>
   <block id="3c5bdd4a077d520c4b4870fb15f37d1b" category="summary">現在のリリースには、 ONTAP Selectに固有のいくつかの新機能または改善点が含まれています。</block>
@@ -3155,8 +3153,6 @@
   <block id="6f78f7cef2637ad960245873ccb009cc" category="list-text">ONTAP Selectノードにストレージを接続する準備</block>
   <block id="14ce7f56600ce32dd333637eed98cd8f" category="open-title">ハードウェアRAID</block>
   <block id="66ef34be992df3691380b5f366935c14" category="inline-link-macro">ストレージプール（KVM）</block>
-  <block id="e6590b92b825641d452dbbfa0d4cf1d1" category="paragraph">ローカルハードウェアRAIDコントローラを使用する場合は、少なくとも1つのデータストア（ESX）または1つの<block ref="a828881b33208a7c4812d178d14998a2" category="inline-link-macro-rx"></block>各ノードにシステムデータ、ルートアグリゲート、データアグリゲート用のストレージプールを配置します。ONTAPONTAP Selectノードの設定の一環として、ストレージプールを接続する必要があります。</block>
-  <block id="19d8e46deea8d239f3274a92f88038ab" category="paragraph">ソフトウェアRAIDを使用する場合は、少なくとも1つのデータストア（ESX）または1つの<block ref="a828881b33208a7c4812d178d14998a2" category="inline-link-macro-rx"></block>システムデータ用であり、ルートアグリゲートとデータアグリゲートでSSDドライブが使用可能であることを確認してください。ONTAPONTAP Selectノードの設定の一環として、ストレージプールとディスクを接続する必要があります。</block>
   <block id="d5ba525828b35ea241ddabb08b074ffd" category="list-text">利用可能なONTAP Selectバージョン</block>
   <block id="908272d4cd58c61b9a3bc042f376ee86" category="inline-link-macro">ONTAP Selectイメージを追加する</block>
   <block id="e037f6aae5e648de44fa07863c350701" category="paragraph">Deploy管理ユーティリティには、 ONTAP Selectの単一バージョンが含まれています。以前のバージョンのONTAP Selectを使用してクラスタを展開する場合は、まず<block ref="6403b9b63d70488e119e79bd63bd10d8" category="inline-link-macro-rx"></block>デプロイインスタンスに追加します。</block>
@@ -3322,8 +3318,6 @@
   <block id="6bf206aa142c608ffc9dfde649825ec0" category="inline-link-macro">ONTAP Select Deploy をインストールする</block>
   <block id="06a53967f62b6ebf8a1fba55cabdfecf" category="list-text"><block ref="06a53967f62b6ebf8a1fba55cabdfecf" category="inline-link-macro-rx"></block></block>
   <block id="89ac05efab2228e74e12191efccdf85c" category="inline-link-macro">デプロイ構成データを新しい仮想マシンに復元します</block>
-  <block id="9731a2aaf926f5fd46b5a7343839efb4" category="list-text"><block ref="9731a2aaf926f5fd46b5a7343839efb4" category="inline-link-macro-rx"></block></block>
-  <block id="907984c60dd3b3b1d06b28812739f3a3" category="list-text"><block ref="907984c60dd3b3b1d06b28812739f3a3" category="inline-link-macro-rx"></block></block>
   <block id="010b1bb88703436584f35ee315ce708a" category="summary">コマンドライン インターフェイスを使用して、Deploy 管理ユーティリティの既存のインスタンスを新しい仮想マシンに移行できます。</block>
   <block id="e3bfc1919cc23daba80c8010e3175d9c" category="doc">ONTAP Select Deployインスタンスを新しい仮想マシンに移行する</block>
   <block id="55327b42261932bc23e2c7dff5397072" category="paragraph">この手順は、元の仮想マシンの構成データを使用して新しい仮想マシンを作成することを前提としています。新しい仮想マシンと元の仮想マシンは、同じバージョンとリリースのDeployユーティリティを実行する必要があります。異なるバージョンとリリースのDeployユーティリティに移行することはできません。</block>
@@ -3830,4 +3824,9 @@
   <block id="03cb40fe1372475f8e49ebd07e5d2d9c" category="admonition">VMFSのオーバーヘッドはゼロではなく（VMware KB 1001618）、データストアによって空き領域として報告された領域全体を使用しようとすると、クラスタ作成操作中に誤ったエラーが発生することが判明しました。</block>
   <block id="02eaca23acd9bd60cfee240891736083" category="inline-link-macro">FlexCache による ONTAP Select への書き戻し</block>
   <block id="829a60be78f33e711c960543ff962d08" category="paragraph">ONTAP Select での FlexCache 書き戻しのサポートには制限があります。詳細については、<block ref="43b5c38e400537347d857d4ad7b2dd01" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="6e1243914ebc1fc5867ce44540c39b39" category="list-text"><block ref="6e1243914ebc1fc5867ce44540c39b39" category="inline-link-macro-rx"></block></block>
+  <block id="71899ba242d53dc1852e2afd35f4bf4a" category="paragraph">ローカルハードウェア RAIDコントローラを使用する場合は、システムデータ、ルートアグリゲート、およびデータアグリゲートのために、各ノードに少なくとも 1 つのデータストア （ESX） または 1 つの<block ref="91f06d9f052d8b4c88dd49c62ddbf249" category="inline-link-macro-rx"></block>を作成する必要があります。ONTAP Select ノードの設定の一部として、ストレージプールを接続する必要があります。</block>
+  <block id="2ce8ff0e84e7712b0b593cd8a3d974aa" category="paragraph">ソフトウェアRAIDを使用する場合は、システムデータ用に少なくとも1つのデータストア（ESX）または1つの<block ref="91f06d9f052d8b4c88dd49c62ddbf249" category="inline-link-macro-rx"></block>を作成し、ルートおよびデータアグリゲート用にSSDドライブが利用可能であることを確認してください。ONTAP Selectノードの設定の一部として、ストレージプールとディスクを接続する必要があります。</block>
+  <block id="a8038442da6adccc95dc96f901c895e3" category="list-text"><block ref="a8038442da6adccc95dc96f901c895e3" category="inline-link-macro-rx"></block></block>
+  <block id="241b4315fc3c4e6905896340939f6270" category="list-text"><block ref="241b4315fc3c4e6905896340939f6270" category="inline-link-macro-rx"></block></block>
 </blocks>

@@ -30,12 +30,12 @@ ONTAP Select Deploy 管理ユーティリティに付属のコマンドライン
 ====
 .ハードウェアRAID
 --
-ローカルハードウェアRAIDコントローラを使用する場合は、少なくとも1つのデータストア（ESX）または1つのlink:reference_chk_host_prep.html#create-storage-pool["ストレージプール（KVM）"]各ノードにシステムデータ、ルートアグリゲート、データアグリゲート用のストレージプールを配置します。ONTAPONTAP Selectノードの設定の一環として、ストレージプールを接続する必要があります。
+ローカルハードウェア RAIDコントローラを使用する場合は、システムデータ、ルートアグリゲート、およびデータアグリゲートのために、各ノードに少なくとも 1 つのデータストア （ESX） または 1 つのlink:kvm-host-configuration-and-preparation-checklist.html#create-storage-pool["ストレージプール（KVM）"]を作成する必要があります。ONTAP Select ノードの設定の一部として、ストレージプールを接続する必要があります。
 
 --
 .ソフトウェアRAID
 --
-ソフトウェアRAIDを使用する場合は、少なくとも1つのデータストア（ESX）または1つのlink:reference_chk_host_prep.html#create-storage-pool["ストレージプール（KVM）"]システムデータ用であり、ルートアグリゲートとデータアグリゲートでSSDドライブが使用可能であることを確認してください。ONTAPONTAP Selectノードの設定の一環として、ストレージプールとディスクを接続する必要があります。
+ソフトウェアRAIDを使用する場合は、システムデータ用に少なくとも1つのデータストア（ESX）または1つのlink:kvm-host-configuration-and-preparation-checklist.html#create-storage-pool["ストレージプール（KVM）"]を作成し、ルートおよびデータアグリゲート用にSSDドライブが利用可能であることを確認してください。ONTAP Selectノードの設定の一部として、ストレージプールとディスクを接続する必要があります。
 
 --
 ====

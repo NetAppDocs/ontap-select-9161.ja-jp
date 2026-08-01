@@ -214,6 +214,6 @@ disk assign -disk <mediator-disk2-name> -owner <node2-name>
 
 .関連情報
 * link:task_install_deploy.html["ONTAP Select Deploy をインストールする"]
-* link:task_cli_migrate_deploy.html#restoring-the-deploy-configuration-data-to-the-new-virtual-machine["デプロイ構成データを新しい仮想マシンに復元します"]
-* link:task_adm_licenses.html#reinstalling-a-capacity-pool-license["容量プールライセンスを再インストールする"]
+* link:task_cli_migrate_deploy.html#restore-the-deploy-configuration-data-to-the-new-virtual-machine["デプロイ構成データを新しい仮想マシンに復元します"]
+* link:task_adm_licenses.html#reinstall-a-capacity-pool-license["容量プールライセンスを再インストールする"]
 
